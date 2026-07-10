@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Sistema de Clasificación de Pecanas | Jamil Salas — Mecatronics Engineer
+    </title>
+    <meta
+      name="description"
+      content="Inspección y control de calidad automatizado mediante visión por computadora e IA, reduciendo en 75% la carga de trabajo operativa."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="project.css" />
+
+    <!-- Google model-viewer: renders glTF/GLB 3D models, draggable to orbit, pinch/scroll to zoom -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="grid-overlay" aria-hidden="true"></div>
+    <div class="process-line" aria-hidden="true">
+      <div class="process-line__fill" id="processFill"></div>
+    </div>
+
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="https://jamilsg.github.io/briefcase/" class="nav__logo"
+          >JS<span class="nav__logo-dot">•</span
+          ><span class="nav__logo-sub">MECATRÓNICA</span></a
+        >
+        <nav class="nav__links" id="navLinks">
+          <a href="https://jamilsg.github.io/briefcase/#proyectos">Proyectos</a>
+          <a href="https://jamilsg.github.io/briefcase/#skills">Skills</a>
+          <a
+            href="https://jamilsg.github.io/briefcase/#contacto"
+            class="nav__cta"
+            >Contacto</a
+          >
+        </nav>
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="https://jamilsg.github.io/briefcase/">Inicio</a>
+      <span>/</span>
+      <a href="https://jamilsg.github.io/briefcase/#proyectos">Proyectos</a>
+      <span>/</span>
+      <span class="breadcrumb__current"
+        >Sistema de Clasificación de Pecanas</span
+      >
+    </nav>
+
+    <!-- PROJECT HERO -->
+    <section class="project-hero">
+      <div class="project-hero__badges">
+        <span>Visión por Computadora</span>
+        <span>IA</span>
+        <span>Autodesk Inventor</span>
+      </div>
+      <h1 class="project-hero__title">Sistema de Clasificación de Pecanas</h1>
+      <p class="project-hero__desc">
+        Inspección y control de calidad automatizado mediante visión por
+        computadora e IA, reduciendo en 75% la carga de trabajo operativa.
+      </p>
+      <div class="project-hero__actions">
+        <a
+          href="https://github.com/jamilSG/pecan-classification"
+          target="_blank"
+          rel="noopener"
+          class="btn btn--primary"
+          ><i class="fa-brands fa-github"></i> Ver en GitHub</a
+        >
+        <a
+          href="https://jamilsg.github.io/briefcase/#proyectos"
+          class="btn btn--ghost"
+          ><i class="fa-solid fa-arrow-left"></i> Todos los proyectos</a
+        >
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="project-section">
+      <h2 class="project-section__title">
+        <i class="fa-solid fa-circle-info"></i> Descripción general
+      </h2>
+      <p class="project-section__lead">
+        Ante la necesidad de la hacienda San Juan de Vellavista (ICA),
+        exportadores de pecanas tipo Mahan, se planteó el desarrollo de un
+        sistema automatizado de inspección para clasificar el producto por
+        calidad (color y defectos superficiales). Para validar la viabilidad y
+        el funcionamiento de esta propuesta, lideré un equipo de 8 estudiantes
+        de ingenieria en el diseño y construcción de un prototipo de media
+        fidelidad. Este sistema integra un modelo de visión por computadora
+        entrenado con imágenes reales y un mecanismo de selección diseñado en
+        Autodesk Inventor. El proyecto demostró el potencial de reemplazar la
+        selección manual, estandarizar los criterios de calidad y proyectar una
+        reducción de hasta el 75% en la carga de trabajo operativa.
+      </p>
+    </section>
+
+    <!-- KEY FEATURES -->
+    <section class="project-section">
+      <h2 class="project-section__title">
+        <i class="fa-solid fa-layer-group"></i> Características clave
+      </h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3><i class="fa-solid fa-eye"></i> Visión por computadora</h3>
+          <ul>
+            <li>Clasificación por color y defectos superficiales</li>
+            <li>Pipeline de preprocesamiento e inferencia en tiempo real</li>
+            <li>Umbral de confianza ajustable por lote de producción</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3><i class="fa-solid fa-cube"></i> Diseño mecánico</h3>
+          <ul>
+            <li>Mecanismo de selección modelado en Autodesk Inventor</li>
+            <li>Sistema de bandas transportadoras y actuadores de descarte</li>
+            <li>Prototipado con impresión 3D para validación de encaje</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3><i class="fa-solid fa-chart-line"></i> Resultado operativo</h3>
+          <ul>
+            <li>
+              <strong>75%</strong> de reducción en carga de trabajo manual
+            </li>
+            <li>Criterio de clasificación estandarizado y trazable</li>
+            <li>Base para escalar a otras líneas de producto agrícola</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH SPECS -->
+    <section class="project-section">
+      <h2 class="project-section__title">
+        <i class="fa-solid fa-ruler-combined"></i> Especificaciones técnicas
+      </h2>
+      <table class="specs-table">
+        <tr>
+          <td>Método de clasificación</td>
+          <td>
+            Visión por computadora (Modelos entrenados de Detección y
+            Clasificación)
+          </td>
+        </tr>
+        <tr>
+          <td>Software de diseño</td>
+          <td>Autodesk Inventor</td>
+        </tr>
+        <tr>
+          <td>Criterios evaluados</td>
+          <td>Tamaño, defectos superficiales</td>
+        </tr>
+        <tr>
+          <td>Reducción de carga operativa</td>
+          <td>75% con respecto a carga medida</td>
+        </tr>
+        <tr>
+          <td>Prototipado</td>
+          <td>Media Fidelidad con piezas impresas en 3D</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- 3D MODEL VIEWER -->
+    <section class="project-section">
+      <h2 class="project-section__title">
+        <i class="fa-solid fa-cube"></i> Modelo 3D interactivo
+      </h2>
+      <div class="model-viewer-wrap">
+        <model-viewer
+          src="assets_pecan-classification/try2.gltf"
+          alt="Modelo 3D de Sistema de Clasificación de Pecanas"
+          orientation="90deg 90deg 180deg"
+          camera-controls
+          auto-rotate
+          auto-rotate-delay="1500"
+          shadow-intensity="1"
+          exposure="1"
+          camera-orbit="25deg 75deg 105%"
+          poster="../assets/projects/placeholder.svg"
+        >
+        </model-viewer>
+        <div class="model-viewer-wrap__bar">
+          <span
+            ><i class="fa-solid fa-arrows-rotate"></i>Arrastra para rotar ·
+            scroll para zoom</span
+          >
+          <span class="model-status">CARGANDO MODELO…</span>
+        </div>
+      </div>
+      <!-- <p class="model-hint">
+        <i class="fa-solid fa-triangle-exclamation"></i> Modelo de ejemplo —
+        reemplaza el atributo <code>src</code> con tu archivo .glb/.gltf
+        (exporta desde Autodesk Inventor/Fusion 360 o convierte tu .stl con un
+        conversor STL→glTF).
+      </p> -->
+    </section>
+
+    <!-- GALLERY -->
+    <section class="project-section">
+      <h2 class="project-section__title">
+        <i class="fa-solid fa-images"></i> Galería
+      </h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img
+            src="assets_pecan-classification/visitaPando2.jpg"
+            alt="Prototipo impreso en 3D"
+            loading="lazy"
+          />
+          <div class="gallery-item__caption">Visita al pando</div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="assets_pecan-classification/impresionPinonPrueba.jpeg"
+            alt="Impresión de Componentes de Trasmisión"
+            loading="lazy"
+          />
+          <div class="gallery-item__caption">
+            Impresión de Componentes de Trasmisión
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="assets_pecan-classification/real.png"
+            alt="Diagrama de Flujo"
+            loading="lazy"
+          />
+          <div class="gallery-item__caption">Prototipo Real</div>
+        </div>
+
+        <div class="gallery-item" data-type="video">
+          <video
+            src="assets_pecan-classification/ValidacionFuncionalidad.mp4"
+            muted
+            loop
+            playsinline
+          ></video>
+          <div class="gallery-item__caption">Prueba de Funcionamiento</div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="assets_pecan-classification/pruebaVisualizacionPecana01.jpeg"
+            alt="Prototipo impreso en 3D"
+            loading="lazy"
+          />
+          <div class="gallery-item__caption">Validación de Computer Vision</div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="assets_pecan-classification/EsquematicoElectrico.png"
+            alt="Esquematico Electrico"
+            loading="lazy"
+          />
+          <div class="gallery-item__caption">Esquematico Electrico</div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="assets_pecan-classification/logicaControl.png"
+            alt="Diagrama de Flujo"
+            loading="lazy"
+          />
+          <div class="gallery-item__caption">Logica de clasificación</div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="assets_pecan-classification/image.png"
+            alt="Prueba con Distintos Modelos"
+            loading="lazy"
+          />
+          <div class="gallery-item__caption">Prueba con Distintos Modelos</div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="assets_pecan-classification/team1.jpeg"
+            alt="Prototipo impreso en 3D"
+            loading="lazy"
+          />
+          <div class="gallery-item__caption">Prototipo impreso en 3D</div>
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="assets_pecan-classification/team2.jpeg"
+            alt="Prototipo impreso en 3D"
+            loading="lazy"
+          />
+          <div class="gallery-item__caption">
+            Foto de equipo de Desarrollo 2
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CODE -->
+    <!-- <section class="project-section">
+      <h2 class="project-section__title">
+        <i class="fa-solid fa-code"></i> Código
+      </h2>
+      <div class="code-block">
+        <div class="code-tabs">
+          <button class="code-tab is-active" data-target="code-panel-0">
+            classifier.py
+          </button>
+        </div>
+        <div class="code-panel is-active" id="code-panel-0">
+          <div class="code-panel__bar">
+            <span class="code-panel__lang">PYTHON · classifier.py</span>
+            <a
+              class="code-panel__download"
+              href="https://github.com/tu-usuario/pecan-classification/blob/main/classifier.py"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-solid fa-download"></i> Descargar</a
+            >
+          </div>
+          <pre><code class="language-python">import cv2
+
+def classify_pecan(image_path, model):
+    """Clasifica una pecana por tamaño, color y defectos."""
+    img = cv2.imread(image_path)
+    features = extract_features(img)
+    prediction = model.predict([features])
+    return prediction[0]</code></pre>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- COMPONENTS -->
+    <section class="project-section">
+      <h2 class="project-section__title">
+        <i class="fa-solid fa-microchip"></i> Componentes Clave
+      </h2>
+      <table class="components-table">
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Cantidad</th>
+            <th>Función</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cámara lifeCam hd-3000</td>
+            <td>1</td>
+            <td>Captura de imágenes para inferencia</td>
+          </tr>
+          <tr>
+            <td>Transportador de rodillos</td>
+            <td>1</td>
+            <td>Transporte y Alineación del producto</td>
+          </tr>
+          <tr>
+            <td>Arduino Uno</td>
+            <td>1</td>
+            <td>Controlador de Actuadores</td>
+          </tr>
+          <tr>
+            <td>Sensor Infrarrojo FC-51</td>
+            <td>1</td>
+            <td>
+              Deteccion de presencia de fruto para accionamiento de actuador
+            </td>
+          </tr>
+          <tr>
+            <td>Actuador de descarte</td>
+            <td>2</td>
+            <td>
+              Separación por categoría de calidad mediante elemento impreso
+            </td>
+          </tr>
+          <tr>
+            <td>Raspberry Pi 8gb</td>
+            <td>1</td>
+            <td>Ejecución del modelo en tiempo real</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PROJECT FOOTER NAV -->
+    <div class="project-nav-footer">
+      <a href="https://jamilsg.github.io/nostop-tollcollection"
+        ><i class="fa-solid fa-arrow-left"></i> NOSTOP Peajes</a
+      >
+      <a href="https://jamilsg.github.io/briefcase/#proyectos"
+        >Todos los proyectos <i class="fa-solid fa-grip"></i
+      ></a>
+      <a href="https://jamilsg.github.io/greenhouse-control.html"
+        >Invernadero Automatizado <i class="fa-solid fa-arrow-right"></i
+      ></a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacto">
+      <p class="section__tag">CONTACTO</p>
+      <h2 class="footer__title">Hablemos de tu próximo proyecto</h2>
+      <p class="footer__subtitle">
+        Disponibilidad total para traslado o régimen minero. Respondo rápido.
+      </p>
+      <div class="footer__links">
+        <a href="mailto:jamilmilansalasgutierrez@gmail.com" class="footer__link"
+          ><i class="fa-solid fa-envelope"></i>
+          jamilmilansalasgutierrez@gmail.com</a
+        >
+        <a href="tel:+51906222270" class="footer__link"
+          ><i class="fa-solid fa-phone"></i> 906-222-270</a
+        >
+        <a
+          href="https://linkedin.com/in/jamil-salas"
+          target="_blank"
+          rel="noopener"
+          class="footer__link"
+          ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+        >
+        <a
+          href="https://github.com/jamilSG"
+          target="_blank"
+          rel="noopener"
+          class="footer__link"
+          ><i class="fa-brands fa-github"></i> GitHub</a
+        >
+      </div>
+      <p class="footer__bottom">
+        © <span id="year"></span> Diseñado y desarrollado por Jamil Salas
+      </p>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <img id="lightboxImg" src="" alt="" style="display: none" />
+      <video
+        id="lightboxVideo"
+        src=""
+        controls
+        style="
+          display: none;
+          max-width: 90vw;
+          max-height: 82vh;
+          border-radius: 8px;
+        "
+      ></video>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="../script.js"></script>
+    <script src="project.js"></script>
+  </body>
+</html>
